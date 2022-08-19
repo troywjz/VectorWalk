@@ -1,0 +1,203 @@
+/* 对浏览器默认属性清零 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans SC';
+    /* 长单词折叠 */
+    word-wrap: break-word;
+}
+
+
+/* container 总体 */
+
+div.container{
+    /* width: 1000px; */
+    width: 60%;
+    margin: 0 auto; /* 水平居中 */
+}
+
+
+/* header */
+
+div.header{
+    margin: 0 auto; /* 水平居中-div居中 */  
+    height: 250px;
+    margin-top: 30px;
+    text-align: center; /* 水平居中-文字图片 */  
+}
+
+/* rocket_logo */
+
+img#rocket_logo{
+    width: 100px;
+    height: 100px;
+    top: 30px;
+}
+
+h1.header_title{
+    top: 100px;
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+    /* identical to box height */
+
+    color: #000000;
+
+}
+
+h2.header_sub_title{
+    top: 200px;
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 8px;
+    line-height: 40px;
+    color: #000000;
+    text-align: center; /* 水平居中-文字图片 */
+}
+
+
+/* navbar */
+
+div.navbar{
+    /* width: 1000px; */
+    height: 50px;
+    top: 400px;
+    text-align: center; /* 水平居中-文字图片 */
+    font-size: 0px;
+}
+
+a.navbar_tabs{
+    display: inline-block;
+    /* width: 80px; */
+    width: 8%;
+    height: 25px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px; /* 垂直居中,值与高度一致 */
+    text-decoration: none;/* 删掉链接下划线 */
+    border-bottom: 1px solid #ccc;
+    color: #000;
+}
+
+/* a标签鼠标移入效果 */
+a:hover{
+    color: blue;
+    background-color: #ccc;
+    /* 缩放 */
+    transform: scale(1.1);
+}
+
+
+/* content_and_menu */
+div.content_and_menu{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10%;
+    /* 相对定位 */
+    position: relative;
+}
+
+/* content */
+div.content{
+    /* 文档定位,不独占一行 */
+    /* display: inline-block; */
+    float: left; /* 浮动定位 */
+    width: 65%;
+    /* background-color: aqua; */
+}
+
+div.articles{
+    margin-top: 10px;
+    /* 设置为弹性容器 */
+    display: flex;
+    /* 弹性盒子列布局 - 列布局 */
+    flex-direction: column;
+    /* 折行 */
+    /* flex-wrap: wrap; */
+    /* 元素在主轴上对齐方式 - 拉手对齐 */
+    justify-content: space-around;
+    /* 元素在副轴上对齐方式 - 拉伸 */
+    align-items: stretch;
+}
+
+div.article{
+    height: 80px;
+    margin-top: 20px;
+    background-color: rgb(243, 243, 243);
+    /* 圆角 */
+    border-radius: 10px 10px;
+    /* 阴影 */
+    box-shadow: 0px 0px 5px rgb(213, 213, 213);
+    /* 弹性元素-各占比例 */
+    flex-grow: 1;
+    /* 弹性元素-压缩比例 */
+    flex-shrink: 1;
+    /* 弹性元素-在主轴上的尺寸 */
+    /* flex-basis: 100%; */
+}
+
+/* 文章排布顺序 */
+div#article1{order: 9999;}
+div#article2{order: 9998;}
+div#article3{order: 9997;}
+div#article4{order: 9996;}
+div#article5{order: 9995;}
+
+
+div.article_title{
+    height: 40px;
+    margin-left: 10px;
+    line-height: 45px;
+
+}
+
+div.article_link{
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+
+/* menu */
+div.menu{
+    /* 不单独占一行 */
+    /* display: inline-block; */
+    left: 65%;
+    float: right; /* 浮动定位 */
+    width: 25%;
+    /* 固定定位 */
+    /* position: fixed; */
+    /* background-color: antiquewhite; */
+}
+
+/* menu_tabs */
+div.menu_tabs{
+    margin-top: 10px;
+}
+
+a.menu_tabs{
+    margin-top: 8px;
+    display: block;
+    /* width: 80px; */
+    height: 25px;
+    font-size: 18px;
+    /* text-align: center; */
+    /* 垂直居中,值与高度一致 */
+    line-height: 25px; 
+    text-decoration: none;/* 删掉链接下划线 */
+    color: #000;
+}
+
+
+/* footer */
+div.footer{
+    border-top: 2px solid #000;
+    height: 100px;
+    display: block;
+}
